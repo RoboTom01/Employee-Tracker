@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const db = require('./db/connection');
+const db = require('./config/connection');
 
 
 db.connect(err => {
@@ -40,7 +40,7 @@ var employee_tracker = function () {
             inquirer.prompt([{
                 type: 'input',
                 name: 'department',
-                message: 'What is the name of the dpeartment?',
+                message: 'What is the name of the department?',
                 validate: departmentInput => {
                     if (departmentInput) {
                         return true;
